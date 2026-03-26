@@ -17,19 +17,19 @@
 
   <style>
     :root {
-      --bg: #06070a;
-      --surface: #0e1015;
-      --surface-2: #151923;
-      --line: rgba(255,255,255,.08);
-      --text: #ffffff;
-      --muted: #a5adbb;
-      --primary: #d4af6c;
-      --primary-2: #a77d35;
-      --success: #1fbf75;
-      --danger: #ff5d5d;
+      --bg: #f5f0e6;
+      --surface: #fffaf2;
+      --surface-2: #f3ead9;
+      --line: rgba(91,44,56,.12);
+      --text: #2c1f17;
+      --muted: #6a5b53;
+      --primary: #8b5e34;
+      --primary-2: #6f4725;
+      --success: #1f8f58;
+      --danger: #c14d4d;
       --radius-xl: 28px;
       --radius-lg: 20px;
-      --shadow: 0 20px 70px rgba(0,0,0,.35);
+      --shadow: 0 20px 70px rgba(91,44,56,.10);
       --max: 1240px;
     }
 
@@ -39,9 +39,9 @@
       margin: 0;
       font-family: 'Cairo', sans-serif;
       background:
-        radial-gradient(circle at top right, rgba(212,175,108,.12), transparent 22%),
-        radial-gradient(circle at left 20%, rgba(255,255,255,.05), transparent 18%),
-        linear-gradient(180deg, #050609 0%, #090b10 40%, #07080c 100%);
+        radial-gradient(circle at top right, rgba(139,94,52,.12), transparent 22%),
+        radial-gradient(circle at left 20%, rgba(91,44,56,.06), transparent 18%),
+        linear-gradient(180deg, #fbf7f0 0%, #f7f1e6 40%, #f3ecdf 100%);
       color: var(--text);
       overflow-x: hidden;
     }
@@ -61,15 +61,15 @@
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(212,175,108,.32); }
     .btn-outline {
-      border-color: rgba(255,255,255,.14); background: rgba(255,255,255,.03); color: #fff;
+      border-color: rgba(91,44,56,.14); background: rgba(255,255,255,.7); color: var(--text);
       backdrop-filter: blur(10px);
     }
-    .btn-outline:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.25); }
+    .btn-outline:hover { transform: translateY(-2px); border-color: rgba(91,44,56,.25); }
 
     .topbar {
       position: sticky; top: 0; z-index: 1000;
-      background: rgba(5,6,10,.65); backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      background: rgba(251,247,240,.82); backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(91,44,56,.08);
     }
     .topbar-inner {
       min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 18px;
@@ -81,8 +81,8 @@
     .brand-mark {
       width: 44px; height: 44px; border-radius: 14px;
       display: grid; place-items: center;
-      background: linear-gradient(135deg, var(--primary), #fff0c9);
-      color: #131313; font-weight: 900; box-shadow: 0 12px 24px rgba(212,175,108,.25);
+      background: linear-gradient(135deg, var(--primary), #d8b47c);
+      color: #fffdf9; font-weight: 900; box-shadow: 0 12px 24px rgba(139,94,52,.22);
     }
     .nav {
       display: flex; align-items: center; gap: 24px; color: var(--muted); font-weight: 700;
@@ -90,7 +90,7 @@
     .nav a:hover { color: #fff; }
     .nav-toggle {
       display: none; width: 48px; height: 48px; border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); color: #fff;
+      border: 1px solid rgba(91,44,56,.08); background: rgba(255,255,255,.7); color: var(--text);
       font-size: 1.2rem;
     }
 
@@ -130,8 +130,8 @@
     .hero-trust span::before { content: '✓'; margin-left: 8px; color: var(--primary); font-weight: 900; }
 
     .hero-card {
-      position: relative; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.08); border-radius: 34px; padding: 22px; box-shadow: var(--shadow);
+      position: relative; background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,248,238,.92));
+      border: 1px solid rgba(91,44,56,.08); border-radius: 34px; padding: 22px; box-shadow: var(--shadow);
       overflow: hidden;
     }
     .hero-card::before {
@@ -140,19 +140,19 @@
       filter: blur(15px);
     }
     .dashboard {
-      border-radius: 26px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); background: #0a0d13;
+      border-radius: 26px; overflow: hidden; border: 1px solid rgba(91,44,56,.08); background: #fffdf9;
     }
     .dash-top {
       display: flex; align-items: center; justify-content: space-between; gap: 10px;
-      padding: 16px 18px; border-bottom: 1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.02);
+      padding: 16px 18px; border-bottom: 1px solid rgba(91,44,56,.06); background: rgba(139,94,52,.04);
     }
     .dots { display: flex; gap: 8px; }
-    .dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.25); }
+    .dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(139,94,52,.35); }
     .dash-body { padding: 18px; display: grid; gap: 16px; }
     .dash-row { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.07); border-radius: 22px; padding: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(252,246,239,.92));
+      border: 1px solid rgba(91,44,56,.07); border-radius: 22px; padding: 18px;
     }
     .metric {
       display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 14px;
@@ -171,13 +171,13 @@
     .mini-list { display: grid; gap: 10px; }
     .mini-item {
       display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.05); padding: 12px 14px; border-radius: 16px;
+      background: rgba(139,94,52,.04); border: 1px solid rgba(91,44,56,.05); padding: 12px 14px; border-radius: 16px;
     }
     .mini-item b { font-size: .97rem; }
     .mini-item small { color: var(--muted); }
     .status {
       font-size: .8rem; font-weight: 800; padding: 8px 10px; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.04);
+      border: 1px solid rgba(91,44,56,.08); background: rgba(139,94,52,.07);
     }
 
     .section { padding: 38px 0; }
@@ -198,8 +198,8 @@
       grid-template-columns: repeat(4, 1fr);
     }
     .stat {
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.07); border-radius: 24px; padding: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
+      border: 1px solid rgba(91,44,56,.07); border-radius: 24px; padding: 24px;
     }
     .stat strong { display: block; font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 8px; }
     .stat p { margin: 0; color: var(--muted); line-height: 1.8; }
@@ -209,14 +209,14 @@
     }
     .service {
       position: relative; overflow: hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.08); border-radius: 28px; padding: 26px;
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
+      border: 1px solid rgba(91,44,56,.08); border-radius: 28px; padding: 26px;
       min-height: 100%; transition: .25s ease;
     }
     .service:hover { transform: translateY(-6px); border-color: rgba(212,175,108,.25); }
     .service .num {
       width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center;
-      background: rgba(212,175,108,.12); border: 1px solid rgba(212,175,108,.2); color: var(--primary);
+      background: rgba(139,94,52,.1); border: 1px solid rgba(139,94,52,.18); color: var(--primary);
       font-weight: 900; margin-bottom: 18px;
     }
     .service h3 { margin: 0 0 10px; font-size: 1.35rem; }
@@ -225,12 +225,12 @@
     .service li::before { content: '—'; color: var(--primary); margin-left: 8px; }
 
     .comparison {
-      overflow: hidden; border-radius: 28px; border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      overflow: hidden; border-radius: 28px; border: 1px solid rgba(91,44,56,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
     }
     table { width: 100%; border-collapse: collapse; }
     th, td { padding: 18px 16px; text-align: right; border-bottom: 1px solid rgba(255,255,255,.06); }
-    th { color: #fff; background: rgba(255,255,255,.04); font-size: .95rem; }
+    th { color: var(--text); background: rgba(139,94,52,.06); font-size: .95rem; }
     td { color: #dce1e9; }
     .yes { color: #89f0b7; font-weight: 800; }
     .no { color: #ff9e9e; font-weight: 800; }
@@ -240,8 +240,8 @@
     }
     .step {
       position: relative; padding: 26px; border-radius: 26px; min-height: 240px;
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border: 1px solid rgba(255,255,255,.08); overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
+      border: 1px solid rgba(91,44,56,.08); overflow: hidden;
     }
     .step .index {
       position: absolute; top: 6px; left: 18px; font-size: 5rem; font-weight: 900; opacity: .07;
@@ -249,7 +249,7 @@
     }
     .step b {
       display: inline-grid; place-items: center; width: 54px; height: 54px; border-radius: 18px;
-      background: rgba(212,175,108,.12); color: var(--primary); border: 1px solid rgba(212,175,108,.2);
+      background: rgba(139,94,52,.1); color: var(--primary); border: 1px solid rgba(139,94,52,.18);
       margin-bottom: 18px;
     }
     .step h4 { margin: 0 0 10px; font-size: 1.2rem; }
@@ -261,8 +261,8 @@
     }
     .plan {
       position: relative;
-      border-radius: 30px; padding: 28px; border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: 30px; padding: 28px; border: 1px solid rgba(91,44,56,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
     }
     .plan.featured {
       border-color: rgba(212,175,108,.35);
@@ -284,12 +284,12 @@
       grid-template-columns: 1fr 1fr;
     }
     .panel {
-      border-radius: 28px; padding: 28px; border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: 28px; padding: 28px; border: 1px solid rgba(91,44,56,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
     }
     .panel .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
     .kpi {
-      border-radius: 18px; padding: 18px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06);
+      border-radius: 18px; padding: 18px; background: rgba(139,94,52,.05); border: 1px solid rgba(91,44,56,.06);
     }
     .kpi strong { display: block; font-size: 1.4rem; }
     .kpi span { color: var(--muted); font-size: .92rem; }
@@ -298,8 +298,8 @@
       grid-template-columns: repeat(3, 1fr);
     }
     .quote {
-      border-radius: 28px; padding: 24px; border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: 28px; padding: 24px; border: 1px solid rgba(91,44,56,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
     }
     .quote p { color: #e6ebf2; line-height: 1.95; margin: 0 0 18px; }
     .quote b { display: block; margin-bottom: 4px; }
@@ -309,8 +309,8 @@
       display: grid; gap: 14px;
     }
     .faq-item {
-      border-radius: 22px; overflow: hidden; border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius: 22px; overflow: hidden; border: 1px solid rgba(91,44,56,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
     }
     .faq-btn {
       width: 100%; background: transparent; color: #fff; border: none; cursor: pointer;
@@ -328,21 +328,21 @@
       display: grid; grid-template-columns: 1.1fr .9fr; gap: 22px;
     }
     .contact-card, .contact-form {
-      border-radius: 30px; padding: 28px; border: 1px solid rgba(255,255,255,.08);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: 30px; padding: 28px; border: 1px solid rgba(91,44,56,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(252,245,235,.9));
     }
     .contact-list { display: grid; gap: 14px; margin-top: 18px; }
     .contact-item {
       display: flex; align-items: center; justify-content: space-between; gap: 16px;
-      padding: 14px 16px; border-radius: 18px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06);
+      padding: 14px 16px; border-radius: 18px; background: rgba(139,94,52,.04); border: 1px solid rgba(91,44,56,.06);
     }
     form { display: grid; gap: 14px; }
     .field {
-      width: 100%; border-radius: 18px; border: 1px solid rgba(255,255,255,.09);
-      background: rgba(255,255,255,.03); color: #fff; padding: 16px 18px; font: inherit;
+      width: 100%; border-radius: 18px; border: 1px solid rgba(91,44,56,.09);
+      background: rgba(255,255,255,.8); color: var(--text); padding: 16px 18px; font: inherit;
       outline: none;
     }
-    .field::placeholder { color: #9aa3b2; }
+    .field::placeholder { color: #8d7e75; }
     .field:focus { border-color: rgba(212,175,108,.45); box-shadow: 0 0 0 4px rgba(212,175,108,.12); }
     textarea.field { min-height: 140px; resize: vertical; }
     .notice {
@@ -365,8 +365,26 @@
     .floating-cta {
       position: fixed; left: 18px; bottom: 18px; z-index: 1000;
       display: inline-flex; align-items: center; gap: 10px; padding: 14px 18px;
-      border-radius: 999px; color: #111; font-weight: 900;
-      background: linear-gradient(135deg, var(--primary), #f2ddb6); box-shadow: 0 16px 34px rgba(0,0,0,.28);
+      border-radius: 999px; color: #fffdf9; font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), #b07a45); box-shadow: 0 16px 34px rgba(91,44,56,.18);
+    }
+
+    .floaty {
+      animation: floaty 4s ease-in-out infinite;
+    }
+    @keyframes floaty {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .icon-pop {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .service:hover .icon-pop,
+    .step:hover b,
+    .service:hover .num {
+      transform: scale(1.08) rotate(-3deg);
+      box-shadow: 0 14px 24px rgba(139,94,52,.18);
     }
 
     @media (max-width: 1100px) {
@@ -377,8 +395,8 @@
     @media (max-width: 760px) {
       .nav {
         display: none; position: absolute; top: 84px; right: 16px; left: 16px; padding: 16px;
-        border-radius: 20px; border: 1px solid rgba(255,255,255,.08);
-        background: rgba(8,10,14,.96); flex-direction: column; align-items: stretch;
+        border-radius: 20px; border: 1px solid rgba(91,44,56,.08);
+        background: rgba(255,249,241,.98); flex-direction: column; align-items: stretch;
       }
       .nav.open { display: flex; }
       .nav-toggle { display: inline-grid; place-items: center; }
@@ -422,10 +440,9 @@
       <div class="container hero-wrap">
         <div class="hero-copy reveal">
           <span class="badge"><span class="pulse"></span> هوية سعودية واضحة وحلول جاهزة للنمو</span>
-          <h1>منصة أقوى من مجرد متجر<br>هذا نظام بيع ونمو<br>باسم <span style="color:var(--primary)">وضوح</span></h1>
+          <h1>منصة وضوح بشكل سعودي راقٍ<br>تخلي العميل يفهم خدمتك بسرعة<br>ويتواصل وهو مقتنع</h1>
           <p class="lead">
-            نصمم لك حضوراً رقمياً محترفاً يبيع فعلاً: موقع تعريفي فاخر، صفحة خدمات ذكية، عرض واضح للباقات، واجهة تواصل قوية، وتجربة تقنع العميل من أول زيارة.
-            مناسب للشركات التي تبيع إنشاء المتاجر الإلكترونية، تطبيقات الجوال، الميديا باينج، والتشغيل التسويقي داخل السوق السعودي.
+            في وضوح نقدم لك واجهة احترافية بطابع سعودي واضح تخدم نشاطك من أول زيارة. سواء كنت تبيع إنشاء متجر إلكتروني أو تطبيق جوال أو خدمات نمو رقمي، المنصة هذه مصممة عشان تعطي انطباع ثقة وفخامة وتسهّل على العميل اتخاذ القرار.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#pricing">شاهد الباقات</a>
@@ -514,8 +531,8 @@
           <p>متوسط تقييم تجربة العملاء عند وضوح من حيث المرونة وسرعة التنفيذ.</p>
         </article>
         <article class="stat">
-          <strong data-count="24">0</strong>
-          <p>ساعة عمل لتجهيز النسخة الأساسية وبدء الانطلاقة الرقمية بشكل احترافي.</p>
+          <strong data-count="240">0</strong>
+          <p>عميل وثق في حلولنا وخطواتنا التشغيلية.</p>
         </article>
       </div>
     </section>
@@ -531,10 +548,10 @@
         </div>
 
         <div class="grid services">
-          <article class="service reveal">
-            <div class="num">01</div>
-            <h3>إنشاء متاجر إلكترونية</h3>
-            <p>نبني متجرك بهوية احترافية وتجربة مستخدم مهيأة للبيع داخل السوق السعودي والخليجي.</p>
+          <article class="service reveal floaty">
+            <div class="num icon-pop">01</div>
+            <h3>إنشاء متجر إلكتروني</h3>
+            <p>نبني لك متجر احترافي بهوية مرتبة وتجربة استخدام مريحة تخلي العميل يوصل للطلب بسهولة داخل السوق السعودي والخليجي.</p>
             <ul>
               <li>تصميم واجهات بيع حديثة</li>
               <li>صفحات منتجات عالية التحويل</li>
@@ -543,10 +560,10 @@
             </ul>
           </article>
 
-          <article class="service reveal">
-            <div class="num">02</div>
-            <h3>تحويل المتجر إلى تطبيق</h3>
-            <p>حلول تطبيقات جوال تعرض القيمة الحقيقية لخدمتك وتقدمها بشكل يرفع الإغلاق والثقة.</p>
+          <article class="service reveal floaty">
+            <div class="num icon-pop">02</div>
+            <h3>تطبيق جوال لنشاطك</h3>
+            <p>نجهز لك واجهة تطبيق جوال تعكس قيمة نشاطك بشكل أنيق وتساعدك تعرض خدمتك بصورة أقوى وأوضح للعميل.</p>
             <ul>
               <li>واجهة تعريفية للتطبيق</li>
               <li>عرض مزايا iOS و Android</li>
@@ -555,10 +572,10 @@
             </ul>
           </article>
 
-          <article class="service reveal">
-            <div class="num">03</div>
-            <h3>ميديا باينج ونمو رقمي</h3>
-            <p>رسائل إعلانية وهوية تسويقية تدعم قرار الشراء وتقلل التشتت داخل الصفحة.</p>
+          <article class="service reveal floaty">
+            <div class="num icon-pop">03</div>
+            <h3>نمو رقمي وإعلانات</h3>
+            <p>نبني لك عرض رقمي مرتب ورسائل تسويقية واضحة تدعم قرار الشراء وتخلي الصفحة أكثر إقناعاً.</p>
             <ul>
               <li>عروض موجهة للتحويل</li>
               <li>صياغة قيمة مقنعة</li>
@@ -632,25 +649,25 @@
         </div>
 
         <div class="grid process">
-          <article class="step reveal">
+          <article class="step reveal floaty">
             <div class="index">1</div>
             <b>01</b>
             <h4>لفت الانتباه</h4>
             <p>عنوان قوي ورسالة واضحة تخلي الزائر يفهم فوراً أن وضوح شركة تبيع نتيجة فعلية وليس مجرد تصميم صفحة.</p>
           </article>
-          <article class="step reveal">
+          <article class="step reveal floaty">
             <div class="index">2</div>
             <b>02</b>
             <h4>بناء الثقة</h4>
             <p>أرقام، شهادات، أقسام منظمة، وعرض احترافي يزيل الشك ويقوي قرار العميل.</p>
           </article>
-          <article class="step reveal">
+          <article class="step reveal floaty">
             <div class="index">3</div>
             <b>03</b>
             <h4>توضيح العرض</h4>
             <p>باقات مفهومة وخدمات موصوفة بلغة بيع تجعل المقارنة لصالحك بسهولة.</p>
           </article>
-          <article class="step reveal">
+          <article class="step reveal floaty">
             <div class="index">4</div>
             <b>04</b>
             <h4>إغلاق التفاعل</h4>
@@ -672,9 +689,9 @@
 
         <div class="grid pricing">
           <article class="plan reveal">
-            <h3>باقة البداية</h3>
-            <p>للشركات أو المتاجر التي تريد حضوراً منظماً وبداية صحيحة.</p>
-            <div class="price">3,500 ر.س</div>
+            <h3>باقة الإنشاء</h3>
+            <p>مناسبة للأنشطة اللي تبغى انطلاقة مرتبة وموقع يعرض الخدمة بشكل واضح ومحترف.</p>
+            <div class="price">1,200 ريال</div>
             <small>دفعة تأسيسية</small>
             <ul>
               <li>صفحة رئيسية احترافية</li>
@@ -689,8 +706,8 @@
           <article class="plan featured reveal">
             <span class="tag">الأكثر طلباً</span>
             <h3>باقة النمو</h3>
-            <p>أفضل خيار للشركات التي تريد موقعاً يبيع بوضوح ويظهرها بمستوى أعلى من المنافسين.</p>
-            <div class="price">7,500 ر.س</div>
+            <p>الخيار الأنسب للجهات اللي تبغى عرض أقوى وثقة أعلى وتجربة تواصل أفضل مع العملاء.</p>
+            <div class="price">1,500 ريال</div>
             <small>تصميم + هيكلة بيع كاملة</small>
             <ul>
               <li>كل ما في باقة البداية</li>
@@ -704,9 +721,9 @@
           </article>
 
           <article class="plan reveal">
-            <h3>باقة الإطلاق الكامل</h3>
-            <p>للجهات التي تريد نسخة أقوى مع تخصيص أعلى ورسائل أكثر قوة في السوق السعودي.</p>
-            <div class="price">14,000 ر.س</div>
+            <h3>باقة الأبلكيشن موبيل</h3>
+            <p>مخصصة للأنشطة اللي تبغى تقدم خدمة تحويل المتجر إلى تطبيق بشكل احترافي وراقي.</p>
+            <div class="price">2,000 ريال</div>
             <small>نسخة مخصصة بالكامل</small>
             <ul>
               <li>كل ما في باقة النمو</li>
@@ -839,7 +856,7 @@
           <p class="sub" style="max-width:none;">استبدل البيانات التالية ببياناتك الفعلية داخل الكود. تركتها واضحة حتى تعدلها بسهولة بعد الرفع.</p>
 
           <div class="contact-list">
-            <div class="contact-item"><b>واتساب</b><a href="https://wa.me/966500000000" target="_blank" rel="noopener">+966 50 000 0000</a></div>
+            <div class="contact-item"><b>واتساب</b><a href="https://wa.me/201551244344" target="_blank" rel="noopener">01551244344</a></div>
             <div class="contact-item"><b>البريد الإلكتروني</b><a href="mailto:info@wodouh.sa">info@wodouh.sa</a></div>
             <div class="contact-item"><b>الموقع</b><span>wodouh.sa</span></div>
             <div class="contact-item"><b>المقر</b><span>المملكة العربية السعودية - الرياض</span></div>
@@ -881,7 +898,7 @@
     </div>
   </footer>
 
-  <a class="floating-cta" href="https://wa.me/966500000000" target="_blank" rel="noopener">تواصل واتساب الآن</a>
+  <a class="floating-cta" href="https://wa.me/201551244344" target="_blank" rel="noopener">تواصل واتساب الآن</a>
 
   <script>
     const navToggle = document.getElementById('navToggle');
@@ -912,19 +929,22 @@
         if (!entry.isIntersecting) return;
         const el = entry.target;
         const target = parseFloat(el.dataset.count);
-        const duration = 1200;
+        const duration = 1400;
         const start = performance.now();
 
         const step = (now) => {
           const progress = Math.min((now - start) / duration, 1);
-          const value = target % 1 !== 0 ? (target * progress).toFixed(1) : Math.floor(target * progress);
-          el.textContent = value + (el.dataset.count === '4.8' ? '/5' : el.dataset.count === '24' ? '+' : el.dataset.count === '320' ? '+' : '+');
+          const raw = target * progress;
+          const value = target % 1 !== 0 ? raw.toFixed(1) : Math.floor(raw);
+          if (target === 4.8) {
+            el.textContent = value + '/5';
+          } else {
+            el.textContent = value + '+';
+          }
           if (progress < 1) requestAnimationFrame(step);
           else {
-            if (target === 12) el.textContent = '12+';
-            if (target === 320) el.textContent = '320+';
             if (target === 4.8) el.textContent = '4.8/5';
-            if (target === 24) el.textContent = '24+';
+            else el.textContent = Math.floor(target) + '+';
           }
         };
         requestAnimationFrame(step);
