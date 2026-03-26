@@ -3,34 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبدالعظيم | حلول التسويق الرقمي</title>
+    <title>عبدالعظيم | خبير ميديا باينج وتسويق</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #050505; color: white; }
-        .gradient-text { background: linear-gradient(90deg, #ffffff, #888888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-saudi { background-color: white; color: black; transition: 0.3s; }
-        .btn-saudi:hover { background-color: #1D6D2E; color: white; transform: scale(1.05); }
+        body { font-family: 'Cairo', sans-serif; background-color: #000; color: white; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(90deg, #fff, #888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background: #0a0a0a; border: 1px solid #1a1a1a; transition: 0.3s; }
+        .card:hover { border-color: #1D6D2E; transform: translateY(-5px); }
     </style>
 </head>
 <body>
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <div class="text-2xl font-black uppercase tracking-tighter">ABDULAZIM</div>
-        <a href="https://wa.me/yournumber" class="btn-saudi px-6 py-2 rounded-full font-bold text-sm">تواصل معنا</a>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto p-5 flex justify-between items-center">
+            <div class="text-xl font-black tracking-tighter">ABDULAZIM</div>
+            <a href="https://wa.me/201XXXXXXXXX" class="bg-white text-black px-6 py-2 rounded-full font-bold text-xs hover:bg-[#1D6D2E] hover:text-white transition">تحدث معي الآن</a>
+        </div>
     </nav>
 
-    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-4">
-        <h1 class="text-5xl md:text-8xl font-black mb-6 gradient-text">نصنع أثراً <br> رقمياً لا يُنسى</h1>
-        <p class="text-gray-400 max-w-xl text-lg md:text-xl mb-8">
-            وكالة تسويق سعودية متخصصة في نمو المتاجر الإلكترونية وتقديم حلول الميديا باينج باحترافية.
+    <section class="pt-40 pb-20 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6 gradient-text">نضاعف مبيعات <br> متجرك الإلكتروني</h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10 leading-relaxed">
+            مستشارك في الميديا باينج وإدارة الحملات الإعلانية الممولة. نركز على تحقيق أعلى عائد على الإنفاق الإعلاني (ROAS) في السوق السعودي.
         </p>
-        <div class="flex gap-4">
-            <button class="btn-saudi px-10 py-4 rounded-lg font-black text-lg shadow-xl">ابدأ مشروعك الآن</button>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="#services" class="bg-white text-black px-10 py-4 rounded-lg font-bold">استكشف خدماتنا</a>
+            <a href="https://wa.me/201551244344" class="border border-gray-700 px-10 py-4 rounded-lg font-bold hover:bg-gray-900 transition">طلب استشارة مجانية</a>
         </div>
     </section>
 
-    <footer class="p-10 text-center border-t border-gray-900 text-gray-600">
-        © 2026 جميع الحقوق محفوظة لـ عبدالعظيم
+    <section id="services" class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-3xl font-black mb-12 text-center">خدماتنا الرئيسية</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-right">
+            <div class="card p-8 rounded-2xl">
+                <div class="text-3xl mb-4">📈</div>
+                <h3 class="text-xl font-bold mb-2">إدارة الميديا باينج</h3>
+                <p class="text-gray-500 text-sm">إدارة حملات (Meta, TikTok, Snapchat) باحترافية للوصول للعميل المستهدف في السعودية.</p>
+            </div>
+            <div class="card p-8 rounded-2xl">
+                <div class="text-3xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold mb-2">استراتيجيات النمو</h3>
+                <p class="text-gray-500 text-sm">تحليل المنافسين وبناء خطة تسويقية شاملة لضمان استدامة الأرباح لمتجرك.</p>
+            </div>
+            <div class="card p-8 rounded-2xl">
+                <div class="text-3xl mb-4">💎</div>
+                <h3 class="text-xl font-bold mb-2">صناعة الهوية البصرية</h3>
+                <p class="text-gray-500 text-sm">تصميم واجهات احترافية ومحتوى إعلاني يخطف الأنظار ويحول المشاهد إلى مشتري.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="p-10 text-center border-t border-white/5 text-gray-700 text-sm mt-20">
+        جميع الحقوق محفوظة © 2026 | عبدالعظيم - وكالة النمو الرقمي
     </footer>
 </body>
 </html>
