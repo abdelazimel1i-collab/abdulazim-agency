@@ -3,99 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وضوح | وكالة نمو رقمي سعودية</title>
+    <title>وضوح | مستشارك للنمو الرقمي في السعودية</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #000; color: white; scroll-behavior: smooth; overflow-x: hidden; }
-        .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
-        .gradient-text { background: linear-gradient(135deg, #fff 0%, #888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-link { transition: 0.3s; position: relative; }
-        .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; right: 0; background-color: #fff; transition: 0.3s; }
+        body { font-family: 'Cairo', sans-serif; background-color: #FFFFFF; color: #111111; scroll-behavior: smooth; overflow-x: hidden; }
+        .hero-title { font-size: clamp(2.5rem, 5vw + 1rem, 5rem); line-height: 1.1; font-weight: 900; letter-spacing: -0.05em; }
+        .ai-image { width: 100%; height: auto; object-fit: cover; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .nav-link { font-weight: 400; color: #555; transition: 0.3s; position: relative; }
+        .nav-link:hover { color: #000; }
+        .nav-link::after { content: ''; position: absolute; width: 0; height: 1.5px; bottom: -5px; right: 0; background-color: #000; transition: 0.3s; }
         .nav-link:hover::after { width: 100%; }
-        section { padding: 100px 20px; }
+        .service-card { background: #F9FAFB; border: 1px solid #EEEEEE; padding: 40px; border-radius: 24px; transition: 0.4s; }
+        .service-card:hover { background: #FFFFFF; border-color: #DDDDDD; transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.03); }
+        section { padding: 120px 20px; }
+        @media (max-width: 768px) { section { padding: 80px 15px; } }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-black/50 backdrop-blur-lg border-b border-white/5">
-        <div class="max-w-7xl mx-auto p-5 flex justify-between items-center">
-            <div class="text-3xl font-black tracking-tighter gradient-text">وضوح</div>
-            <div class="hidden md:flex gap-8 text-sm font-light">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto p-5 flex justify-between items-center relative">
+            <div class="text-3xl font-black text-black tracking-tighter">وضوح</div>
+            <div class="hidden md:flex gap-10 text-sm">
                 <a href="#about" class="nav-link">من نحن</a>
-                <a href="#services" class="nav-link">الخدمات</a>
-                <a href="#privacy" class="nav-link">سياسة الخصوصية</a>
+                <a href="#services" class="nav-link">خدماتنا</a>
+                <a href="#privacy" class="nav-link">الخصوصية</a>
             </div>
-            <a href="https://wa.me/966XXXXXXXXX" class="bg-white text-black px-8 py-2.5 rounded-full font-bold text-xs hover:bg-gray-200 transition duration-500">ابدأ مشروعك</a>
+            <a href="https://wa.me/966XXXXXXXXX" class="bg-black text-white px-8 py-3 rounded-full font-semibold text-xs hover:bg-neutral-800 transition">تحدث معنا</a>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <span class="text-xs tracking-[0.3em] uppercase text-gray-500 mb-5 block font-light text-center">نصنع الفارق في السوق السعودي</span>
-            <h1 class="text-6xl md:text-[100px] font-black leading-none mb-8 gradient-text tracking-tighter">
-                وضوح الرؤية <br> قوة النتائج
-            </h1>
-            <p class="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed mb-12">
-                نحن لسنا مجرد وكالة تسويق، نحن شركاء نجاحك. نستخدم البيانات والإبداع لتحويل متجرك الإلكتروني إلى ماكينة بيع لا تتوقف.
-            </p>
-            <div class="flex gap-6 justify-center">
-                <a href="#services" class="bg-white text-black px-12 py-5 rounded-full font-bold shadow-2xl hover:scale-105 transition">خدماتنا</a>
+    <section class="min-h-screen flex items-center bg-[#F9FAFB]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-up">
+                <span class="text-xs tracking-[0.2em] uppercase text-gray-400 mb-6 block font-medium">شريك النمو الرقمي في السعودية</span>
+                <h1 class="hero-title text-black mb-8">وضوح الرؤية،<br> قوة النتائج.</h1>
+                <p class="text-gray-600 max-w-lg text-lg md:text-xl font-light leading-relaxed mb-12">وكالة ميديا باينج وتسويق رقمي متخصصة في مضاعفة مبيعات المتاجر الإلكترونية السعودية من خلال استراتيجيات مبنية على البيانات والحملات الإعلانية الذكية.</p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#services" class="bg-black text-white px-12 py-5 rounded-full font-bold text-center hover:bg-neutral-800 transition shadow-lg">استكشف خدماتنا</a>
+                    <a href="https://wa.me/966XXXXXXXXX" class="border border-gray-300 text-black px-12 py-5 rounded-full font-bold text-center hover:bg-gray-100 transition">طلب استشارة</a>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <img src="https://i.ibb.co/L5Sg4Mh/ai-consultant-v1.jpg" alt="AI Consultant Saudi" class="ai-image">
             </div>
         </div>
     </section>
 
-    <section id="about" class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center border-t border-white/5">
-        <div data-aos="fade-left">
-            <h2 class="text-4xl font-black mb-8">من نحن؟</h2>
-            <p class="text-gray-400 text-lg leading-loose font-light">
-                في "وضوح"، نؤمن أن التسويق الرقمي هو علم وفن معاً. بدأنا برؤية سعودية طموحة لمساعدة رواد الأعمال والمتاجر الإلكترونية على تخطي تحديات الميديا باينج والوصول لعملائهم الحقيقيين بأقل تكلفة وأعلى كفاءة.
-            </p>
-        </div>
-        <div data-aos="fade-right" class="relative">
-            <div class="aspect-video glass rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center">
-                <span class="text-gray-600 font-light italic text-sm text-center">مساحة للصورة الاحترافية <br> (يمكنك رفع صورتك هنا)</span>
+    <section id="about" class="bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-right" class="order-2 md:order-1">
+                <img src="https://i.ibb.co/3s88D4P/ai-dashboard-v1.jpg" alt="AI Marketing Dashboard" class="ai-image">
+            </div>
+            <div data-aos="fade-up" class="order-1 md:order-2">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-black mb-8 leading-tight">شغفنا هو نمو أعمالك في السوق السعودي.</h2>
+                <p class="text-gray-600 text-lg leading-loose font-light mb-10">في "وضوح"، نحن لسنا مجرد وكالة تسويق، بل نحن شركاء استراتيجيون لنجاحك. نجمع بين الخبرة العميقة في الميديا باينج والفهم الدقيق لثقافة المستهلك السعودي لتقديم حلول متكاملة تضمن لك التفوق على المنافسين وتحقيق أعلى عائد على استثمارك الإعلاني.</p>
             </div>
         </div>
     </section>
 
-    <section id="services" class="bg-[#050505]">
+    <section id="services" class="bg-[#F9FAFB]">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black mb-16 text-center" data-aos="fade-up">كيف نخدمك؟</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass p-10 rounded-[40px]" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-4">إدارة الإعلانات</h3>
-                    <p class="text-gray-500 font-light leading-relaxed text-sm">حملات سناب شات، تيك توك، وميتا مستهدفة بدقة متناهية لضمان أعلى عائد (ROAS).</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-black mb-16 text-center" data-aos="fade-up">كيف نساعدك على النمو؟</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-6">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4">إدارة الحملات الإعلانية</h3>
+                    <p class="text-gray-600 font-light leading-relaxed text-sm">حملات مستهدفة بدقة متناهية على سناب شات وتيك توك وميتا لضمان أعلى عائد إعلاني (ROAS) لمتجرك.</p>
                 </div>
-                <div class="glass p-10 rounded-[40px]" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold mb-4">تحسين التحويل</h3>
-                    <p class="text-gray-500 font-light leading-relaxed text-sm">نحلل سلوك العميل في متجرك ونقترح التعديلات اللازمة لتحويل الزوار إلى مشترين دائمين.</p>
-                </div>
-                <div class="glass p-10 rounded-[40px]" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="text-2xl font-bold mb-4">كتابة المحتوى البيعي</h3>
-                    <p class="text-gray-500 font-light leading-relaxed text-sm">نكتب نصوصاً إعلانية تخاطب العاطفة وتدفع للقرار، بلهجة سعودية بيضاء قريبة للناس.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="privacy" class="max-w-7xl mx-auto p-10 border-t border-white/5">
-        <div class="grid md:grid-cols-2 gap-10 text-sm text-gray-500 font-light leading-loose">
-            <div>
-                <h4 class="text-white font-bold mb-4 text-lg">سياسة الخصوصية</h4>
-                <p>في "وضوح"، نلتزم بحماية بيانات عملائنا وخصوصية المتاجر التي نديرها. جميع البيانات والحملات الإعلانية تتم معالجتها بسرية تامة لضمان أمن معلوماتك التجارية.</p>
-            </div>
-            <div class="md:text-left">
-                <div class="text-2xl font-black text-white mb-4">وضوح</div>
-                <p>© 2026 وضوح للخدمات الرقمية. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-    </script>
-</body>
-</html>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-6">📈</div>
+                    <h
